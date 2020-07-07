@@ -16,5 +16,6 @@ get "/:title" do
     film_selected = Film.all.select { |film| film.title == params[:title] }[0]
     @film_title = film_selected.title
     @film_price = film_selected.price
+    @film_screenings = film_selected.screenings.empty? ? "None" : film_selected.screenings.map { |screening| screening.time }.join(", ")
     erb(:film_details)
 end
