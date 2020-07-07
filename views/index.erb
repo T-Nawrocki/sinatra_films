@@ -7,7 +7,7 @@
 </head>
 <body>
     <ul>
-        <li> <%= @films.map { |film| "#{film.title} : £#{film.price}" }.join("<li>")%>
+        <li> <%= @films_display.join("<li>")%>
     </ul>
 </body>
 </html>
