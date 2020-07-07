@@ -13,6 +13,8 @@ get "/" do
 end
 
 get "/:title" do
-    @film = Film.all.select { |film| film.title == params[:title] }
+    film_selected = Film.all.select { |film| film.title == params[:title] }[0]
+    @film_title = film_selected.title
+    @film_price = film_selected.price
     erb(:film_details)
 end
