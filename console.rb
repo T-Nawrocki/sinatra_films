@@ -31,8 +31,23 @@ film_2 = Film.new({
     "title" => "Feet of Clay",
     "price" => "10"
 })
+film_3 = Film.new({
+    "title" => "The Truth",
+    "price" => "6"
+})
+film_4 = Film.new({
+    "title" => "Going Postal",
+    "price" => "7"
+})
+film_5 = Film.new({
+    "title" => "Monstrous Regiment",
+    "price" => "12"
+})
 film_1.save
 film_2.save
+film_3.save
+film_4.save
+film_5.save
 
 screening_1 = Screening.new({
     "time" => "16.30",
